@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <h1>{{ title }}</h1>
+<ul>
+  <li v-for="task in tasks" :key="task.id">
+
+  </li>
+</ul>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
+  data() {
+    return {
+      title: "My first project",
+      tasks: [
+        { id: 1, name: "learn VUE3 JS", finished: false },
+        { id: 2, name: "learn VUE3 JS2", finished: false },
+        { id: 3, name: "learn VUE3 JS3", finished: false },
+        { id: 4, name: "learn VUE3 JS4", finished: false },
+      ],
+    };
   },
 };
 </script>
